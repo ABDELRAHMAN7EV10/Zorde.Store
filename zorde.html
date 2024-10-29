@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zorde Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .product-section, .gallery, .contact-section {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .product {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .image-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .images img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button.left {
+            left: 10px;
+        }
+        .button.right {
+            right: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .contact-section label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-section input, .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-section button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zorde Store</h1>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="1.jpg" alt="Product Image 1">
+                    <img src="2.jpg" alt="Product Image 2">
+                    <img src="3.jpg" alt="Product Image 3">
+                    <img src="4.jpg" alt="Product Image 1">
+                    <img src="5.jpg" alt="Product Image 2">
+                    <img src="6.jpg" alt="Product Image 3">
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2>مساحة التويست الشقية</h2>
+            <p>المميزات: تتحرك 360 درجة لتصل لكل حتة في البيت. مصنوعة من قماش المايكروفيبر الذي يمتص الماء بسهولة. سهلة التنظيف.</p>
+            <p><strong>Price:</strong> 370ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+            <p>030107MT0099</p>
+            
+        </div>
+    </section>
+
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="product">
+                <div class="image-slider">
+                    <div class="images" id="imageContainer">
+                        <img src="7.png" alt="Product Image 1">
+                        <img src="8.png" alt="Product Image 2">
+                        <img src="9.png" alt="Product Image 3">
+                        <img src="10.png" alt="Product Image 1">
+                        <img src="11.png" alt="Product Image 2">
+                        <img src="12.png" alt="Product Image 3">
+                    </div>
+                    <button class="button left" onclick="prevImage()">&#10094;</button>
+                    <button class="button right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <h2> قطاعة Veggie Slicer الحديثة</h2>
+                <p>مميزات المنتج
+                    توفير الوقت والمجهود ⏱️💪: هتقطعي وتهرسي أي حاجة في ثواني، واستمتعي بالأكل بدون تعب أو فوضى!
+                    سلامة اليدين ونظافة المطبخ 👐🧼: قطاعة خضار آمنة وسريعة، مثالية لكل ست بيت تحب النظافة!
+                    متعددة الاستخدامات 🔄🍽️: قطعة واحدة بعشرة استخدامات! أي شكل أو حجم تحتاجينه، هتلاقيه فيها.
+                    أجود الخامات 🏆💰: مصنوع من مواد عالية الجودة وبسعر ممتاز، خيارك الذكي لمطبخك!
+                    تفاصيل سريعة 📝✨: تحتوي على 13 قطعة وبألوان عشوائية، تناسب كل الأذواق!
+                    اطلبيها الآن واستمتعي بتجربة طهي سهلة وممتعة! 🛒🎉
+                    تفاصيل سريعة
+                    القطع :16 قطعه
+                    اللون : عشوائي</p>
+                <p><strong>Price:</strong> 400ج</p>
+                <p><strong>شحن مجاني لحد باب البيت</strong></p>
+                <p><strong>لجميع محافظات مصر</strong></p>
+                <p>EG030402VVEG99NEW</p>
+            </div>
+        </section>
+
+ <!-- Product Section -->
+ <section class="product-section">
+    <div class="product">
+        <div class="image-slider">
+            <div class="images" id="imageContainer">
+                <img src="13 (5).png" alt="Product Image 1">
+                <img src="13 (1).jpg" alt="Product Image 2">
+                <img src="13 (2).jpg" alt="Product Image 3">
+                <img src="13 (3).jpg" alt="Product Image 1">
+                <img src="13 (4).jpg" alt="Product Image 2">
+            
+            </div>
+            <button class="button left" onclick="prevImage()">&#10094;</button>
+            <button class="button right" onclick="nextImage()">&#10095;</button>
+        </div>
+<h2>عرض 3 قطع شماعة خلف الباب قابلة للتمدد</h2>
+      <p>مميزات المنتج
+        استغلال مثالي للمساحة: بتتحط بسهولة ورا الباب من غير ما تاخد مكان.
+        قابلة للتمدد: ممكن توسعها أو تقفلها حسب احتياجاتك.
+        متعددة الاستخدامات: بتشيل هدوم، شنط، وكمان إكسسوارات.
+        سهلة التركيب: بتتعلق من غير مسامير أو حفر، في ثواني!
+        تصميم متين: خامات قوية تقدر تشيل وزن تقيل بكل سهولة.
+        تفاصيل سريعة
+        الوزن : 464 جرام .
+        المواد المصنوع منها : الأستانليس تيل .</p>
+        <p><strong>Price:</strong> 510ج</p>
+        <p><strong>شحن مجاني لحد باب البيت</strong></p>
+        <p><strong>لجميع محافظات مصر</strong></p>
+    <p>EG030501SAHM99</p>
+    </div>
+</section>
+
+            <!-- Product Section -->
+    <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="14 (1).png" alt="Product Image 1">
+                    <img src="14 (2).png" alt="Product Image 2">
+                    <img src="14 (3).png" alt="Product Image 3">
+                    <img src="14 (4).png" alt="Product Image 1">
+                    <img src="14 (5).png" alt="Product Image 2">
+                    
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2>عرض قطعتين فرشاة التنظيف الحديثة</h2>
+ <p>مميزات المنتج
+    قوية ومتينة: مش هتتعبي نفسك مع المواعين ، الفرشاة دي هتخلصك منها في ثواني.
+    بتلمع الأواني زي الكريستال: هتخلي كل المواعين والأحواض في مطبخك تلمع وترجع الجديدة.
+    عمرها طويل: مش هتحتاج تغيرها كل شوية، مصنوعة من الأستانلس ستيل اللي مقاوم للصدأ .
+    سهلة الاستخدام: تصميمها العملي هيخليكي تنظفي المواعين بكل سهولة من غير ما تتعبي إيدك .
+    تفاصيل سريعة
+    الأبعاد: 22.5×7.5×15 سم .
+    المواد المصنوعة منها : الأستانليس ستيل .</p>   
+            <p><strong>Price:</strong> 250ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+            <p> EG030501FOSS99</p>
+        </div>
+    </section>
+
+     
+            <!-- Product Section -->
+    <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="15 (1).png" alt="Product Image 1">
+                    <img src="15 (2).png" alt="Product Image 2">
+                    <img src="15 (3).png" alt="Product Image 3">
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2>مطحنة توابل لاسيلكية</h2>
+            <p>مميزات عامة:
+                سهولة الاستخدام: تشغيل بيد واحدة تلقائي ببساطة عن طريق الضغط على الزر.
+                دقة الطحن: طحن قابل للتعديل من خشن إلى ناعم لضمان حصولك على النكهة المثالية.
+                إضاءة LED: إضاءة LED مدمجة تضيء التوابل أثناء الطحن لضمان الدقة.
+                تصميم أنيق: تصميم أنيق وعصري يناسب أي مطبخ.
+                سهلة التنظيف: سهلة التنظيف بقطعة قماش مبللة.
+                عملية: تعمل بالبطارية (غير متضمنة) لتوفير التشغيل اللاسلكي.
+                قاعدة تخزين: تأتي مع قاعدة تخزين للحفاظ على مطاحن التوابل منظمة.
+                مميزات إضافية:
+                بعض الموديلات تأتي مع شاحن USB لإعادة الشحن.
+                بعض الموديلات تأتي مع حامل للحفاظ على مطاحن التوابل في متناول اليد.
+                بعض الموديلات مصنوعة من مواد مقاومة للصدأ لسهولة التنظيف.</p>
+            <p><strong>Price:</strong> 360ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+            <p> EG030401GRIN99</p>
+        </div>
+    </section>
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="product">
+                <div class="image-slider">
+                    <div class="images" id="imageContainer">
+                        <img src="16 (1).jpeg" alt="Product Image 1">
+                        <img src="16 (1).jpg" alt="Product Image 2">
+                        <img src="16 (1).png" alt="Product Image 3">
+                        <img src="16 (2).jpeg" alt="Product Image 1">
+                        <img src="16 (2).png" alt="Product Image 2">
+                       
+                        
+                    </div>
+                    <button class="button left" onclick="prevImage()">&#10094;</button>
+                    <button class="button right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <h2>عرض قطعتين مسن سكاكين يدوي صغير</h2>
+                <p>مميزات المنتج:
+                    1- هيسن لك كل السكاكين والمقصات والأجهزة الحادة اللي بتبرد ومش بتبقى فعالة زي الأول.
+                    2- هتوفري فلوسك ومش هتحتاجي تشتري سكاكين جديدة كل شوية
+                    3- هتقطعي اللحمة والفراخ ف البيت بنفسك زي مانتي عايزة بدل ما تعتمدي على الجزارين ويقطعولك اللحمة غلط 😑
+                    4- حجمه صغير جدا مش هياخد مكان خالص في مطبخك
+                    5- هتشغليه بشكل يدوي من غير كهربا ولا شحن
+                    تفاصيل سريعة:
+                    اللون عشوائي
+                    الأبعاد: 22 سم * 22 سم * 18 سم
+                    الخامة: بلاستيك عالي الجودة
+                    محتوى العرض: قطعتين مسن السكاكين اليدوي</p>
+                <p><strong>Price:</strong> 250ج</p>
+                <p><strong>شحن مجاني لحد باب البيت</strong></p>
+                <p><strong>لجميع محافظات مصر</strong></p>
+                <p> EG030501ASMS99</p>
+            </div>
+        </section>
+
+            <!-- Product Section -->
+    <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="17 (1).jpg" alt="Product Image 1">
+                    <img src="17 (2).jpg" alt="Product Image 2">
+                    <img src="17 (3).jpg" alt="Product Image 3">
+                    <img src="17 (4).jpg" alt="Product Image 1">
+                    <img src="17 (5).jpg" alt="Product Image 2">
+                  
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2> عرض قطعتين خرامة اللحمه</h2>
+    <p>الميزات:
+        هتخلي أنسجة اللحمة ناعم وتشرب التتبيلة بسهولة.
+        كمان اللحمة هتستوي في وقت قليل ومش هتاخد وقت
+        تقدري تخزنيها ومش هتاخد معاكي مكان.
+        مصنوعة من الاستانلس المقاوم للصدأ
+        بتيجي بيد متينة وهتسهل عليكي الاستخدام.
+        فيها مكان عشان تعلقيها منه.
+        مكونه من 20 ابرة وهتستخدميها بسهولة.
+        مبتغيرش شكل اللحمة وهتحافظ على شكلها الطبيعي
+        الوصف:
+        الأبعاد: 20.1 * 5.5 * 5,5 سم.
+        الوزن: 130 جرام.</p>
+            <p><strong>Price:</strong> 250ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+        <p>EG030501KARM99</p>
+        </div>
+    </section>
+
+      <!-- Product Section -->
+      <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="18.jpg" alt="Product Image 1">
+                    <img src="18.png" alt="Product Image 2">
+                   
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2>ديسبنسر البيبسي FIZZ SAVER</h2>
+            <p>المميزات
+                مصنوع من مواد آمنة وعالية الجودة.
+                الجهاز بسيط واستخدامه سهل.
+                هتحافظ على الصودا عشان تستمتع بطعم البيبسي.
+                شكله شيك وحجمه صغير يعني تقدر تحركه بسهولة.
+                تقدر تستخدمه في البيت وفي أي مكان.
+                هتقدري تحافظي من خلالها على المكان نظيف.
+                قابل للغسل والتنظيف.
+                المواصفات
+                اللون: أحمر.
+                المادة: ABS.
+                الحجم: تقريبا. 15 * 10 * 10 سم.
+                </p>
+            <p><strong>Price:</strong> 210ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+            <p>EG030402DESPN99</p>
+        </div>
+    </section>
+
+      <!-- Product Section -->
+      <section class="product-section">
+        <div class="product">
+            <div class="image-slider">
+                <div class="images" id="imageContainer">
+                    <img src="19 (1).jpg" alt="Product Image 1">
+                    <img src="19 (1).png" alt="Product Image 2">
+                    <img src="19 (2).jpg" alt="Product Image 3">
+                </div>
+                <button class="button left" onclick="prevImage()">&#10094;</button>
+                <button class="button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <h2>غسالة الاكواب الحديثة</h2>
+        <p>المميزات
+            1- تصممها سهل و مريح
+            2-هتغسلى كل الاكواب من غير تعب
+            3 - بتتميز بشدة المياه الى ممكن تشطف طقم كوبيات كامل فى ثوانى
+            4 -بتشطف الكوباية من كل الزوايا
+            5- سهلة الفك والتركيب
+            6- ممكن تستخدم للبيت و المطاعم و الكافيهات
+            الوصف
+            وزن المنتج: حوالي 500 جرام
+            الحجم: 17.5x9x1.2 سم / 6.9x3.6x0.5 بوصة
+            الضغط الاسمي: 1,5 ميجا باسكال</p>
+            <p><strong>Price:</strong> 350ج</p>
+            <p><strong>شحن مجاني لحد باب البيت</strong></p>
+            <p><strong>لجميع محافظات مصر</strong></p>
+            <p>EG030303WASH99</p>
+        </div>
+    </section>
+
+   
+         <!-- Product Section -->
+         <section class="product-section">
+            <div class="product">
+                <div class="image-slider">
+                    <div class="images" id="imageContainer">
+                        <img src="20 (1).jpg" alt="Product Image 1">
+                        <img src="20 (1).png" alt="Product Image 2">
+                        <img src="20 (2).jpg" alt="Product Image 3">
+                        <img src="20 (2).png" alt="Product Image 1">
+                        <img src="20 (3).jpg" alt="Product Image 2">
+                        <img src="20 (3).png" alt="Product Image 3">
+                    </div>
+                    <button class="button left" onclick="prevImage()">&#10094;</button>
+                    <button class="button right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <h2> منظم التوابل الساقية 360 درجة</h2>
+          <p>مميزات المنتج
+            كل التوابل في متناول يدك: مش هتضيع وقتك في البحث عن التوابل تاني.
+            مطبخك هيبقى مرتب وأنيق: هتودع الفوضى في دولاب التوابل.
+            سهل الاستخدام جداً: حتى الأولاد الصغيرين يقدروا يستخدموه.
+            بيوفر مساحة كبيرة في المطبخ: مش هتحتاج لدولاب كبير للتوابل.
+            تصميمه العصري هيضيف لمسة جمالية لمطبخك: ه يخلي مطبخك شكله أحلى بكتير.
+            تفاصيل سريعة
+            الأبعاد : 127 × 178 × 25 ملميتر .
+            به عدد : 18 عبوة .
+            </p>
+                <p><strong>Price:</strong> 540ج</p>
+                <p><strong>شحن مجاني لحد باب البيت</strong></p>
+                <p><strong>لجميع محافظات مصر</strong></p>
+                <p>EG030402MOZN99NEW</p>
+            </div>
+        </section>
+              
+                
+                
+
+
+
+    <h1>ضمان 14 يوم على اي منتج</h1>
+    <a href="https://www.jawdaonline.com/">استرجاج او استبدال</a>
+    <a href="https://www.facebook.com/profile.php?id=61567454965996&mibextid=ZbWKwL">Our facebook</a>
+    <a href="https://www.instagram.com/zorde_store/profilecard/?igsh=dTQ1MWlnczcxbjh1">Our instagram</a>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Order Information</h2>
+        <form action="mailto:zorde00@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="message">Write your order items</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#imageContainer img');
+        
+        function updateImageDisplay() {
+            const totalImages = images.length;
+            const offset = -currentIndex * 100; // Shift by 100% for each image
+            document.getElementById('imageContainer').style.transform = `translateX(${offset}%)`;
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop to the start
+            updateImageDisplay();
+        }
+        
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the end
+            updateImageDisplay();
+        }
+    </script>
+
+</body>
+</html>
